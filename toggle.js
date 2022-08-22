@@ -14,11 +14,10 @@
 // Sample Output
 // ABCDe
 
-
 let fs = require("fs");
-let data = fs.readFileSync(0, 'utf-8');
+let data = fs.readFileSync(0, "utf-8");
 let idx = 0;
-data = data.split('\n');
+data = data.split("\n");
 
 function readLine() {
   idx++;
@@ -26,12 +25,10 @@ function readLine() {
 }
 //
 
-let str = readLine()
-let res = ""
-for(let ele of str){
-    if(ele == ele.toLowerCase())
-    res = res + ele.toUpperCase()
-    else
-    res = res + ele.toLowerCase()
+let str = readLine();
+let res = "";
+for (let ele of str) {
+  if (ele == ele.toLowerCase()) res = res + ele.toUpperCase();
+  else res = res + ele.toLowerCase();
 }
-console.log(res)
+console.log(res);
