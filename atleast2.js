@@ -31,23 +31,36 @@ function readLine() {
 // 6
 // 3 2 2 5 4 5
 
-let n = parseInt(readLine())
-let arr = readLine().split(" ").map(Number)
-let count = 0
-let set = new Set(arr)
-arr = [...set]
-let res=[]
-for(let i=0;i<arr.length-1;i++){
-    for(let j=i+1;j<arr.length;j++){
-        if(arr[i]<arr[j]) count++
-    }
-    if(count>=2){
-        res.push(arr[i])
-        count=0
-    }
+// let n = parseInt(readLine())
+// let arr = readLine().split(" ").map(Number)
+// let count = 0
+// let set = new Set(arr)
+// arr = [...set]
+// let res=[]
+// for(let i=0;i<arr.length-1;i++){
+//     for(let j=i+1;j<arr.length;j++){
+//         if(arr[i]<arr[j]) count++
+//     }
+//     if(count>=2){
+//         res.push(arr[i])
+//         count=0
+//     }
+// }
+// res.sort((a,b)=>a-b)
+// if(res.length!=0)
+// console.log(...res)
+// else
+// console.log(-1)
+
+
+
+let n = readLine()
+let arr = readLine().split(" ");
+let num = [...new Set(arr)];
+num = num.sort()                  // 2 3 4 5
+if (num.length < 3) {
+    console.log(-1)
+} else {
+    num = num.slice(0, -2)
+    console.log(...num)
 }
-res.sort((a,b)=>a-b)
-if(res.length!=0)
-console.log(...res)
-else
-console.log(-1)
