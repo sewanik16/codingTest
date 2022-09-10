@@ -65,3 +65,34 @@ while(tc--){
         console.log(res)
     }
 }
+
+
+
+
+// function Peak(arr){
+//     let n=arr.length
+//     if(arr.length===0){
+//         return -1;
+//     }
+//     if(arr[0]>arr[1] || arr.length==1){
+//         return 1;
+//     }
+//     for(let i=1;i<n-1;i++){
+//         if(arr[i]>arr[i-1] && arr[i]>arr[i+1]){
+//             return i+1;
+//         }
+//     }
+//     if(arr[n-1]>arr[n-2]){
+//         return n;
+//     }
+//     else{
+//         return -1
+//     }
+// }
+
+// let t=parseInt(readLine());
+// for(let i=0;i<t;i++){
+//     let n=parseInt(readLine());
+//     let arr=readLine().trim().split(" ").map(Number);
+//     console.log(Peak(arr));
+// }
